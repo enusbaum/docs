@@ -29,10 +29,10 @@ class CountWords
   
         string searchTerm = "data";  
   
-        //Convert the string into an array of words  
+        //Convert the string into an array of words
         string[] source = text.Split(
-            ['.', '?', '!', ' ', ';', ':', ','],
-            StringSplitOptions.RemoveEmptyEntries);  
+            new[] {'.', '?', '!', ' ', ';', ':', ',' },
+            StringSplitOptions.RemoveEmptyEntries);
   
         // Create the query.  Use the InvariantCultureIgnoreCase comparison to match "data" and "Data"
         var matchQuery = from word in source  
